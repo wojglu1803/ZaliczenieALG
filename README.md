@@ -1,51 +1,66 @@
-# ZaliczenieALG
+"""
+====================================================================================
+                                  MathTool.GUI
+====================================================================================
+
 Opis projektu:
-
-  MathTool.GUI to aplikacja desktopowa napisana w języku Python z wykorzystaniem biblioteki Tkinter. Umożliwia użytkownikowi przeprowadzanie trzech niezależnych operacji matematycznych:
-    wyznaczanie liczb pierwszych przy użyciu algorytmu Sita Eratostenesa,
+    MathTool.GUI to aplikacja desktopowa napisana w języku Python z wykorzystaniem 
+    biblioteki Tkinter. Umożliwia użytkownikowi przeprowadzanie trzech operacji 
+    matematycznych:
+        - wyznaczanie liczb pierwszych (Sito Eratostenesa),
+        - obliczanie wyznacznika macierzy kwadratowej (dowolnego rozmiaru),
+        - szukanie miejsca zerowego wielomianu 5. stopnia metodą bisekcji.
     
-    obliczanie wyznacznika macierzy kwadratowej (dowolnego rozmiaru),
+    Aplikacja posiada prosty interfejs graficzny z oknami dialogowymi do wprowadzania 
+    danych i prezentowania wyników.
+
+------------------------------------------------------------------------------------
+Wymagania:
+    - System operacyjny: Windows 10/11, Linux lub macOS
+    - Python: 3.10 lub nowszy
+    - Edytor: Visual Studio Code (lub inny edytor obsługujący Pythona)
+    - Biblioteki zewnętrzne:
+        • numpy (do obliczania wyznacznika)
     
-    szukanie miejsca zerowego wielomianu 5. stopnia metodą bisekcji.
-    
-Projekt posiada prosty i intuicyjny interfejs graficzny, który pozwala użytkownikowi wprowadzić dane wejściowe i natychmiast uzyskać wynik w formie okna dialogowego.
+------------------------------------------------------------------------------------
+Instalacja:
+    1. Zainstaluj wymagane biblioteki:
+        pip install numpy
 
+    2. Uruchom aplikację:
+        python main.py
+       lub w Visual Studio Code:
+        • Kliknij prawym przyciskiem na main.py → "Run Python File in Terminal"
 
-Wymagania
+------------------------------------------------------------------------------------
+Funkcje aplikacji:
 
-    System operacyjny: Windows 10 / 11, Linux, macOS
-    
-    Środowisko programistyczne: Visual Studio Code lub dowolny edytor Python
-    
-    Wersja Pythona: Python 3.10 lub nowszy
-    
-  Biblioteki zewnętrzne:
-  
-    numpy – do obliczania wyznacznika
+    1. Sito Eratostenesa:
+        - Wprowadź liczbę całkowitą n
+        - Zwraca listę liczb pierwszych ≤ n
 
-Instalacja i uruchomienie
-  Klonowanie lub utworzenie pliku:
-    Utwórz folder projektu i w nim plik main.py. Skopiuj do niego kod źródłowy aplikacji.
-  Instalacja wymaganych bibliotek:
-  W terminalu:
-    pip install numpy
-  Uruchomienie aplikacji:
-  Z poziomu terminala VS Code:
-    python main.py
-    Alternatywnie: kliknij prawym przyciskiem myszy w main.py → Run Python File in Terminal
+    2. Wyznacznik macierzy:
+        - Podaj rozmiar macierzy n
+        - Wprowadź kolejne wiersze (liczby oddzielone spacją)
+        - Wynik: wyznacznik macierzy obliczony z użyciem numpy
 
-Funkcje aplikacji
-  Strona główna:
-    Po uruchomieniu pojawia się okno z trzema przyciskami umożliwiającymi wybór funkcji matematycznej do wykonania:
-  Sito Eratostenesa
-    Wprowadź liczbę całkowitą n
-    Wynikiem jest lista wszystkich liczb pierwszych ≤ n
-  Wyznacznik macierzy
-    Podaj rozmiar macierzy n
-    Wprowadź po kolei każdy wiersz (oddzielając liczby spacją)
-    Wynik: wyznacznik obliczony z wykorzystaniem biblioteki numpy
-  Metoda bisekcji (wielomian 5. stopnia)
-    Wprowadź 6 współczynników wielomianu w kolejności od a₀ do a₅ (czyli: a0 a1 a2 a3 a4 a5)
-    Wprowadź przedział [a, b], w którym funkcja zmienia znak
-    Wynik: przybliżona wartość miejsca zerowego
+    3. Metoda bisekcji (wielomian 5. stopnia):
+        - Wprowadź współczynniki a₀ do a₅ (łącznie 6 liczb)
+        - Podaj przedział [a, b], w którym funkcja zmienia znak
+        - Wynik: miejsce zerowe w zadanym przedziale
 
+------------------------------------------------------------------------------------
+Uwagi:
+    • Funkcja wielomianowa musi zmieniać znak w przedziale (f(a) * f(b) < 0)
+    • Działa na każdym systemie wspierającym tkinter i Pythona 3.10+
+    • W razie potrzeby można rozbudować o:
+        - zapis wyników do pliku,
+        - wykresy funkcji,
+        - analizę błędów i walidację danych.
+
+------------------------------------------------------------------------------------
+Licencja:
+    Projekt udostępniany na licencji MIT – darmowy do użytku i modyfikacji.
+
+====================================================================================
+"""
